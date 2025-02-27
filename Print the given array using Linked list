@@ -1,0 +1,25 @@
+class Node{
+  int data;
+  Node next;
+  public Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class main{
+  public static void main(String args[]){
+    int a[]={3,5,8,2};
+    Node head=new Node(a[0]);
+    Node temp=head;
+    for(int i=1;i<a.length;i++){
+      Node b=new Node(a[i]);
+      temp.next=b;
+      temp=temp.next;
+    }
+    System.out.print("Given data is:");
+    temp=head;
+    while(temp!=null){
+      System.out.print(temp.data+" ");
+      temp=temp.next;
+    }
+  }}
