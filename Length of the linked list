@@ -1,0 +1,27 @@
+class Node{
+  int data;
+  Node next;
+  public Node(int data){
+    this.data=data;
+    this.next=null;
+  }
+}
+public class main{
+  public static void main(String args[]){
+    int a[]={1,2,3,4,5};
+    Node b=new Node(a[0]);
+    Node temp=b;
+    for(int i=1;i<a.length;i++){
+      Node c=new Node(a[i]);
+      temp.next=c;
+      temp=c;
+    }
+    int count=0;
+    temp=b;
+    while(temp!=null){
+      count++;
+      temp=temp.next;
+    }
+    System.out.println("Length of the linked list is:"+count);
+  }
+}
